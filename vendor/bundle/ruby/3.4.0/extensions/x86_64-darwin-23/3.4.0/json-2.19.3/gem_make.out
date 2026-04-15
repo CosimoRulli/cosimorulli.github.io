@@ -1,0 +1,39 @@
+current directory: /Users/cosimorulli/WebSite/cosimorulli.github.io/vendor/bundle/ruby/3.4.0/gems/json-2.19.3/ext/json/ext/parser
+/usr/local/opt/ruby/bin/ruby extconf.rb
+checking for rb_enc_interned_str() in ruby/encoding.h... yes
+checking for rb_str_to_interned_str() in ruby.h... yes
+checking for rb_hash_new_capa() in ruby.h... yes
+checking for rb_hash_bulk_insert() in ruby.h... yes
+checking for whether -std=c99 is accepted as CFLAGS... no
+checking for x86intrin.h... yes
+checking for cpuid.h... yes
+creating Makefile
+
+current directory: /Users/cosimorulli/WebSite/cosimorulli.github.io/vendor/bundle/ruby/3.4.0/gems/json-2.19.3/ext/json/ext/parser
+make DESTDIR\= sitearchdir\=./.gem.20260413-27812-xmobnb sitelibdir\=./.gem.20260413-27812-xmobnb clean
+
+current directory: /Users/cosimorulli/WebSite/cosimorulli.github.io/vendor/bundle/ruby/3.4.0/gems/json-2.19.3/ext/json/ext/parser
+make DESTDIR\= sitearchdir\=./.gem.20260413-27812-xmobnb sitelibdir\=./.gem.20260413-27812-xmobnb
+compiling parser.c
+In file included from parser.c:1:
+In file included from ./../json.h:4:
+In file included from /usr/local/Cellar/ruby/3.4.4/include/ruby-3.4.0/ruby.h:38:
+In file included from /usr/local/Cellar/ruby/3.4.4/include/ruby-3.4.0/ruby/ruby.h:28:
+In file included from /usr/local/Cellar/ruby/3.4.4/include/ruby-3.4.0/ruby/internal/arithmetic.h:24:
+In file included from /usr/local/Cellar/ruby/3.4.4/include/ruby-3.4.0/ruby/internal/arithmetic/char.h:29:
+/usr/local/Cellar/ruby/3.4.4/include/ruby-3.4.0/ruby/internal/core/rstring.h:398:24: warning: default initialization of an object of type 'struct RString' with const member leaves the object uninitialized [-Wdefault-const-init-field-unsafe]
+  398 |         struct RString retval;
+      |                        ^
+/usr/local/Cellar/ruby/3.4.4/include/ruby-3.4.0/ruby/internal/core/rbasic.h:86:17: note: member 'klass' declared 'const' here
+   86 |     const VALUE klass;
+      |                 ^
+1 warning generated.
+linking shared-object json/ext/parser.bundle
+ld: warning: search path '/usr/local/Cellar/openssl@3/3.5.0/lib' not found
+
+current directory: /Users/cosimorulli/WebSite/cosimorulli.github.io/vendor/bundle/ruby/3.4.0/gems/json-2.19.3/ext/json/ext/parser
+make DESTDIR\= sitearchdir\=./.gem.20260413-27812-xmobnb sitelibdir\=./.gem.20260413-27812-xmobnb install
+/usr/bin/install -c -m 0755 parser.bundle ./.gem.20260413-27812-xmobnb/json/ext
+
+current directory: /Users/cosimorulli/WebSite/cosimorulli.github.io/vendor/bundle/ruby/3.4.0/gems/json-2.19.3/ext/json/ext/parser
+make DESTDIR\= sitearchdir\=./.gem.20260413-27812-xmobnb sitelibdir\=./.gem.20260413-27812-xmobnb clean

@@ -4,15 +4,13 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+I’m a researcher in computer science, currently at the Institute of Science and Information Technology
+“Alessandro Faedo” (ISTI), CNR (Pisa, Italy).
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+My research interests include:
+- Efficient and scalable information retrieval
+- Vector search / approximate nearest neighbor search
+- Learned sparse retrieval and inverted index-based methods
+- Efficiency–effectiveness trade-offs, including model compression
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+See also: [Publications](/publications/) and [Contact](/contact/).
