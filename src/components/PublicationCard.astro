@@ -1,0 +1,32 @@
+---
+import type { Paper } from '../data/publications';
+
+interface Props extends Paper {}
+
+const { venueTag, title, authors, venue, short, note, award, doi, pdf, code } = Astro.props;
+
+const hasLinks = doi || pdf || code;
+---
+
+<article class="pub-card">
+  <div class="pub-tag" aria-hidden="true">{venueTag ?? venue.split(' ')[0]}</div>
+  <div class="pub-main">
+    <h3 class="pub-title">{title}</h3>
+    <p class="pub-authors">{authors}</p>
+    <p class="pub-short">
+      {short ?? venue}{note && <span class="pub-note"> ({note})</span>}
+    </p>
+    {award && (
+      <div class="pub-meta">
+        <span class="pub-award">{award}</span>
+      </div>
+    )}
+    {hasLinks && (
+      <div class="pub-links">
+        {doi && <a href={doi} class="pub-link" target="_blank" rel="noopener">DOI</a>}
+        {pdf && <a href={pdf} class="pub-link" target="_blank" rel="noopener">PDF</a>}
+        {code && <a href={code} class="pub-link" target="_blank" rel="noopener">Code</a>}
+      </div>
+    )}
+  </div>
+</article>

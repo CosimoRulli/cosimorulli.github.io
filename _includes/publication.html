@@ -1,0 +1,14 @@
+<article class="pub-card">
+  <div class="pub-venue">{{ include.venue }}{% if include.note %} <span class="pub-note">({{ include.note }})</span>{% endif %}</div>
+  <h3 class="pub-title">{{ include.title }}</h3>
+  <p class="pub-authors">{{ include.authors }}</p>
+  {% if include.award %}
+  <span class="pub-award">{{ include.award }}</span>
+  {% endif %}
+  <div class="pub-links">
+    {% if include.doi %}<a href="{{ include.doi }}" class="pub-link">DOI</a>{% endif %}
+    {% if include.pdf %}<a href="{{ include.pdf }}" class="pub-link">PDF</a>{% endif %}
+    {% if include.code %}<a href="{{ include.code }}" class="pub-link">Code</a>{% endif %}
+    {% if include.bibtex %}<a href="{{ include.bibtex }}" class="pub-link">BibTeX</a>{% endif %}
+  </div>
+</article>

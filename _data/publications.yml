@@ -1,0 +1,81 @@
+- year: 2025
+  papers:
+    - title: "Investigating the Scalability of Approximate Sparse Retrieval Algorithms to Massive Datasets"
+      authors: "S. Bruch et al."
+      venue: "ECIR 2025"
+      award: "Best Student Short Paper Award"
+
+    - title: "kANNolo: Sweet and Smooth Approximate k-Nearest Neighbors Search"
+      authors: "L. Delfino et al."
+      venue: "ECIR 2025"
+
+    - title: "Efficient Approximate Nearest Neighbor Search on a Raspberry Pi"
+      authors: "S. Martinico et al."
+      venue: "SIGIR 2025"
+      note: "accepted"
+
+    - title: "Efficient Conversational Search via Topical Locality in Dense Retrieval"
+      authors: "C. I. Muntean et al."
+      venue: "SIGIR 2025"
+      note: "accepted"
+
+    - title: "Effective Inference-Free Retrieval for Learned Sparse Representations"
+      authors: "F. M. Nardini et al."
+      venue: "SIGIR 2025"
+      note: "accepted"
+
+    - title: "Neural Lexical Search with Learned Sparse Retrieval"
+      authors: "A. Yates et al."
+      venue: "SIGIR 2025"
+      note: "accepted"
+
+    - title: "Neural network compression using binarization and few full-precision weights"
+      authors: "F. M. Nardini et al."
+      venue: "Information Sciences"
+
+    - title: "ChatGPT Versus Modest Large Language Models: An Extensive Study on Benefits and Drawbacks for Conversational Search"
+      authors: "G. Rocchietti et al."
+      venue: "IEEE Access"
+
+- year: 2024
+  papers:
+    - title: "Efficient Inverted Index-based Approximate Retrieval over High-dimensional Learned Sparse Representations"
+      authors: "S. Bruch et al."
+      venue: "IEEE Data Engineering Bulletin 48.3"
+
+    - title: "Efficient Inverted Indexes for Approximate Retrieval over Learned Sparse Representations"
+      authors: "S. Bruch et al."
+      venue: "SIGIR 2024"
+      award: "Best Paper Award (runner-up)"
+
+    - title: "Pairing Clustered Inverted Indexes with κ-NN Graphs for Fast Approximate Retrieval over Learned Sparse Representations"
+      authors: "S. Bruch et al."
+      venue: "CIKM 2024"
+
+    - title: "Efficient Multi-vector Dense Retrieval with Bit Vectors"
+      authors: "F. M. Nardini, C. Rulli, R. Venturini"
+      venue: "ECIR 2024"
+
+    - title: "Distilled Neural Networks for Efficient Learning to Rank (Extended Abstract)"
+      authors: "F. M. Nardini et al."
+      venue: "ICDE 2024"
+
+- year: 2023
+  papers:
+    - title: "Distilled Neural Networks for Efficient Learning to Rank"
+      authors: "F. M. Nardini et al."
+      venue: "IEEE TKDE 35.5"
+
+- year: "Under Review"
+  papers:
+    - title: "Gender Disparities in StackOverflow's Community-Based Question Answering: A Matter of Quantity versus Quality"
+      authors: "M. Amendola et al."
+      venue: "ICWSM 2025"
+
+    - title: "FoodSafeSum: Mining Food Safety Insights and Risks"
+      authors: "J. Bakagianni et al."
+      venue: "EMNLP 2025"
+
+    - title: "Assessing the Polarizing Effect of ad hoc Retrieval in Retrieval-Augmented Generation for Contentious Questions"
+      authors: "T. Tholeti et al."
+      venue: "EMNLP 2025"

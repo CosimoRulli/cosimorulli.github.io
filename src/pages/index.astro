@@ -1,0 +1,224 @@
+---
+import { publications } from '../data/publications';
+import { awards } from '../data/awards';
+import PublicationCard from '../components/PublicationCard.astro';
+import profileImage from '../assets/profile-page.png';
+import '../styles/global.css';
+
+const NAV_LINKS = [
+  { label: 'Home',         href: '#home' },
+  { label: 'Publications', href: '#publications' },
+  { label: 'Awards',       href: '#awards' },
+  { label: 'Contact',      href: '#contact' },
+];
+---
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cosimo Rulli</title>
+  <meta name="description" content="Researcher in Computer Science — efficient retrieval systems, vector search, and learned sparse retrieval." />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+</head>
+<body>
+
+  <!-- ---- Navigation ---- -->
+  <nav class="nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" role="list">
+        {NAV_LINKS.map(({ label, href }) => (
+          <li><a href={href} data-nav-link>{label}</a></li>
+        ))}
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ---- Home ---- -->
+  <section id="home">
+    <div class="section-inner">
+      <p class="section-label">Researcher in Computer Science</p>
+      <div class="hero-row">
+        <div class="hero-content">
+          <h1 class="hero-title">Cosimo<br />Rulli</h1>
+          <p class="hero-bio">
+            I work on <strong>information retrieval</strong> at
+            <strong>ISTI-CNR</strong>, Pisa. My research focuses on making search
+            fast and scalable — from <strong>approximate nearest neighbor search</strong>
+            to <strong>learned sparse representations</strong> and
+            <strong>neural network compression</strong>.
+          </p>
+          <div class="hero-links">
+            <a class="hero-link" href="https://github.com/CosimoRulli" target="_blank" rel="noopener">
+              <svg class="icon icon-fill" aria-hidden="true" viewBox="0 0 16 16">
+                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z" />
+              </svg>
+              GitHub
+            </a>
+            <a class="hero-link" href="https://scholar.google.com/citations?user=mQPpmvUAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener">
+              <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M3 7.5 12 3l9 4.5L12 12 3 7.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+                <path d="M7 10v5.2c0 .7.4 1.3 1 1.6 1.2.7 2.6 1.2 4 1.2s2.8-.5 4-1.2c.6-.3 1-.9 1-1.6V10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                <path d="M21 8v6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+              </svg>
+              Scholar
+            </a>
+            <a class="hero-link" href="https://dblp.org/pid/314/6672.html" target="_blank" rel="noopener">
+              <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
+                <ellipse cx="12" cy="6" rx="7.5" ry="3" fill="none" stroke="currentColor" stroke-width="1.6" />
+                <path d="M4.5 6v6c0 1.66 3.36 3 7.5 3s7.5-1.34 7.5-3V6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+                <path d="M4.5 12v6c0 1.66 3.36 3 7.5 3s7.5-1.34 7.5-3v-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+              </svg>
+              DBLP
+            </a>
+            <a class="hero-link" href="https://orcid.org/0000-0003-0194-361X" target="_blank" rel="noopener">
+              <svg class="icon icon-fill" aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M12 0C5.372 0 0 5.372 0 12c0 6.628 5.372 12 12 12 6.628 0 12-5.372 12-12C24 5.372 18.628 0 12 0Zm-2.59 6.76h1.84v10.48H9.41V6.76Zm.92-1.9a1.16 1.16 0 1 1 0 2.32 1.16 1.16 0 0 1 0-2.32Zm3.14 1.9h3.4c3.1 0 5.02 2.1 5.02 5.24 0 3.34-1.98 5.24-5.02 5.24h-3.4V6.76Zm1.84 1.7v7.08h1.47c1.95 0 3.13-1.17 3.13-3.54 0-2.2-1.13-3.54-3.13-3.54h-1.47Z" />
+              </svg>
+              ORCID
+            </a>
+          </div>
+        </div>
+        <img
+          class="hero-profile"
+          src={profileImage.src}
+          width={profileImage.width}
+          height={profileImage.height}
+          alt="Profile photo"
+          loading="eager"
+          decoding="async"
+        />
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider" />
+
+  <!-- ---- Publications ---- -->
+  <section id="publications">
+    <div class="section-inner">
+      <p class="section-label">Research output</p>
+      {publications.map((group) => (
+        <div class="pub-year-group">
+          <h2 class="pub-year">{group.year}</h2>
+          {group.papers.map((paper) => (
+            <PublicationCard {...paper} />
+          ))}
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <hr class="section-divider" />
+
+  <!-- ---- Awards ---- -->
+  <section id="awards">
+    <div class="section-inner">
+      <p class="section-label">Recognition</p>
+      {awards.map((award) => (
+        <div class="award-card">
+          <span class="award-year">{award.year}</span>
+          <div class="award-body">
+            <p class="award-title">{award.title}</p>
+            <p class="award-event">{award.event}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <hr class="section-divider" />
+
+  <!-- ---- Contact ---- -->
+  <section id="contact">
+    <div class="section-inner">
+      <p class="section-label">Get in touch</p>
+      <ul class="contact-list">
+        <li>
+          <span class="contact-label">Email</span>
+          <span class="contact-value">
+            <a href="mailto:cosimo.rulli@gmail.com">cosimo.rulli@gmail.com</a>
+          </span>
+        </li>
+        <li>
+          <span class="contact-label">GitHub</span>
+          <span class="contact-value">
+            <a href="https://github.com/CosimoRulli" target="_blank" rel="noopener">github.com/CosimoRulli</a>
+          </span>
+        </li>
+        <li>
+          <span class="contact-label">Scholar</span>
+          <span class="contact-value">
+            <a href="https://scholar.google.com/citations?user=mQPpmvUAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener">Google Scholar</a>
+          </span>
+        </li>
+        <li>
+          <span class="contact-label">DBLP</span>
+          <span class="contact-value">
+            <a href="https://dblp.org/pid/314/6672.html" target="_blank" rel="noopener">dblp.org/pid/314/6672</a>
+          </span>
+        </li>
+        <li>
+          <span class="contact-label">ORCID</span>
+          <span class="contact-value">
+            <a href="https://orcid.org/0000-0003-0194-361X" target="_blank" rel="noopener">orcid.org/0000-0003-0194-361X</a>
+          </span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    &copy; {new Date().getFullYear()} Cosimo Rulli
+  </footer>
+
+</body>
+</html>
+
+<script>
+  // ---- Active nav link via IntersectionObserver ----
+  const sections = document.querySelectorAll<HTMLElement>('section[id]');
+  const navLinks = document.querySelectorAll<HTMLAnchorElement>('[data-nav-link]');
+
+  const setActive = (id: string) => {
+    navLinks.forEach((link) => {
+      link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+    });
+  };
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          setActive(entry.target.id);
+        }
+      }
+    },
+    { rootMargin: '-40% 0px -55% 0px', threshold: 0 }
+  );
+
+  sections.forEach((s) => observer.observe(s));
+
+  // ---- Mobile nav toggle ----
+  const toggle = document.querySelector<HTMLButtonElement>('.nav-toggle')!;
+  const navMenu = document.querySelector<HTMLUListElement>('.nav-links')!;
+
+  toggle.addEventListener('click', () => {
+    const open = navMenu.classList.toggle('open');
+    toggle.classList.toggle('open', open);
+    toggle.setAttribute('aria-expanded', String(open));
+  });
+
+  // Close mobile nav when a link is clicked
+  navLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('open');
+      toggle.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>

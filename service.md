@@ -4,6 +4,6 @@ title: Service
 permalink: /service/
 ---
 
-I keep this page short; I can expand it with program committees, reviewing activity, and community roles.
+This page will be updated with program committees, reviewing activity, and community roles.
 
-- (add)
+*Coming soon.*
