@@ -6,10 +6,22 @@ import profileImage from '../assets/profile-page.png';
 import '../styles/global.css';
 
 const NAV_LINKS = [
-  { label: 'Home',         href: '#home' },
-  { label: 'Publications', href: '#publications' },
-  { label: 'Awards',       href: '#awards' },
-  { label: 'Contact',      href: '#contact' },
+  { label: 'Home',          href: '#home' },
+  { label: 'Publications',  href: '#publications' },
+  { label: 'Awards',        href: '#awards' },
+  { label: 'Organizations', href: '#organizations' },
+  { label: 'Contact',       href: '#contact' },
+];
+
+const ORGANIZATIONS = [
+  {
+    name: 'TusKANNy',
+    role: 'Member',
+    description:
+      'Research team building state-of-the-art algorithms and open-source tools for Approximate Nearest Neighbor search across dense, sparse, and multi-vector representations. Based in Pisa, Tuscany.',
+    href: 'https://tuskanny.com/it/',
+    linkLabel: 'tuskanny.com',
+  },
 ];
 ---
 
@@ -128,6 +140,30 @@ const NAV_LINKS = [
             <p class="award-event">{award.event}</p>
           </div>
         </div>
+      ))}
+    </div>
+  </section>
+
+  <hr class="section-divider" />
+
+  <!-- ---- Organizations ---- -->
+  <section id="organizations">
+    <div class="section-inner">
+      <p class="section-label">Affiliations</p>
+      {ORGANIZATIONS.map((org) => (
+        <a class="org-card" href={org.href} target="_blank" rel="noopener">
+          <div class="org-head">
+            <h3 class="org-name">{org.name}</h3>
+            <span class="org-role">{org.role}</span>
+          </div>
+          <p class="org-desc">{org.description}</p>
+          <span class="org-link">
+            {org.linkLabel}
+            <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
+              <path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" />
+            </svg>
+          </span>
+        </a>
       ))}
     </div>
   </section>
